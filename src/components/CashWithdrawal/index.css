@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.small-container {
+  background-color: #150b3e;
+  border-radius: 15px;
+  padding: 40px;
+  width: 40%;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  background-color: #c7d2fe;
+  border-radius: 25px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.name {
+  color: #c7d2fe;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+.balance-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.balance {
+  color: #7c3aed;
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+
+.amount {
+  color: #d4d2db;
+  font-size: 30px;
+}
+
+.rupee {
+  color: #7c3aed;
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+
+.withdraw {
+  color: #d4d2db;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+.button {
+  color: #d4d2db;
+  font-size: 20px;
+  background-color: #585076;
+  border: 1px solid #d4d2db;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin: 10px;
+  outline: none;
+}
