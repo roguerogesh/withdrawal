@@ -1,15 +1,15 @@
 import './index.css'
 
 const DenominationItem = props => {
-  const {eachList, onWithdrawal} = props
+  const {eachList, onWithdrawals} = props
   const {value, id} = eachList
 
-  const onWithdrawal = () => {
-    onWithdrawal(id)
+  const onDescrease = () => {
+    onWithdrawals(id)
   }
   return (
     <li>
-      <button type="button" className="button" onClick={onWithdrawal}>
+      <button type="button" className="button" onClick={onDescrease}>
         {value}
       </button>
     </li>

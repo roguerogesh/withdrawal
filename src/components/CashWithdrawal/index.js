@@ -2,18 +2,21 @@ import {Component} from 'react'
 import './index.css'
 import DenominationItem from '../DenominationItem'
 
-
-
-
 class CashWithdrawal extends Component {
   state = {currentBalace: 2000}
 
-    onWithdrawal = (id, value) =>{
-        this.setState((prevState) => ({currentbalace: prevState.currentBalace - value}))
-    }
+  onWithdrawal = id => {
+    const {denominationsList} = this.props
+    const filtered = denominationsList.filter(each => each.id === id)
+    const {value} = filtered
+    this.setState(prevState => ({
+      currentBalace: prevState.currentBalace - value,
+    }))
+  }
 
   render() {
     const {currentBalace} = this.state
+    const {denominationsList} = this.props
 
     return (
       <div className="container">
@@ -33,8 +36,15 @@ class CashWithdrawal extends Component {
           </div>
           <p className="withdraw">Withdraw</p>
           <p className="balance">CHOOSE SUM (IN RUPEES)</p>
-
-          <ul>{denominationsList.map(each=>(DenominationItem eachList={each} key={each.id} onWithdrawal={this.onWithdrawal}))}</ul>
+          <ul>
+            {denominationsList.map(each => (
+              <DenominationItem
+                eachList={each}
+                key={each.id}
+                onWithdrawals={this.onWithdrawal}
+              />
+            ))}
+          </ul>
         </div>
       </div>
     )
